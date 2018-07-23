@@ -35,6 +35,13 @@ services:
     networks:
       - sky-net
 
+  hystrix-dashboard:
+    image: mlabouardy/hystrix-dashboard:latest
+    ports:
+      - "9002:9002"
+    networks:
+      - sky-net
+      
 networks:
   sky-net:
     driver: bridge
